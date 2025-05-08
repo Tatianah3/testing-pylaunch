@@ -32,7 +32,6 @@ jobs:
 
       - name: Commit changes if CONTRIBUTORS.md is modified
         run: |
-              git checkout -B update-contributors
               git push origin update-contributors
               if [[ $(git status --porcelain) ]]; then
                 git config user.name "github-actions[bot]"
